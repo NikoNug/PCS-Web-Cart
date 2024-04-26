@@ -8,8 +8,10 @@ import (
 
 func RouteInit(c *fiber.App) {
 	// Home
-	// c.Get("/", controller)
+	c.Get("/", controller.GetHelloWorld)
 
 	product := c.Group("/product")
-	product.Get("/", controller.GetProduct)
+	product.Get("/products", controller.GetProducts)
+	product.Post("/products", controller.AddProduct)
+	product.Delete("/products", controller.DeleteProduct)
 }

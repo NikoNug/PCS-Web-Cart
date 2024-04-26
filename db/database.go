@@ -3,7 +3,7 @@ package db
 import "database/sql"
 
 func ConnectDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/PCS")
+	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/pcs")
 	if err != nil {
 		panic(err)
 	}
